@@ -3,19 +3,26 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, Box } from '@mui/material';
 import { signIn } from '../../lib/auth';
+import { useRouter } from 'next/navigation';
+
 
 export default function Login() {
   const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState(''); const router = useRouter();
 
       const handleSubmit = async (e) => {
           e.preventDefault();
+          setError('');
               try {
                     await signIn(email, password);
                           // Redirect to dashboard or handle successful login
+                          console.log('User signed in'); // Log successful login
+                          router.push('/dashboard');
                               } catch (error) {
                                     console.error('Error signing in:', error);
                                           // Handle error (show message to user, etc.)
+                                          setError(error.message);
                                               }
                                                 };
 
@@ -25,6 +32,7 @@ export default function Login() {
                                                                     <Typography component="h1" variant="h5">
                                                                               Sign in
                                                                                       </Typography>
+                                                                                      {error && <Alert severity="error" sx={{ mt: 2, width: '100%' }}>{error}</Alert>}
                                                                                               <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
                                                                                                         <TextField
                                                                                                                     margin="normal"

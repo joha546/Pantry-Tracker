@@ -44,7 +44,7 @@ export default function Dashboard() {
                                                                                                                                       <Container maxWidth="lg">
                                                                                                                                             <Box sx={{ my: 4 }}>
                                                                                                                                                     <Typography variant="h4" component="h1" gutterBottom>
-                                                                                                                                                              Welcome to your Dashboard, {user?.email}
+                                                                                                                                                              Welcome to your Dashboard, {user?.displayName || user?.email}
                                                                                                                                                                       </Typography>
                                                                                                                                                                               <Typography variant="body1" gutterBottom>
                                                                                                                                                                                         This is where you'll manage your pantry items.
@@ -56,3 +56,39 @@ export default function Dashboard() {
                                                                                                                                                                                                                                     </Container>
                                                                                                                                                                                                                                       );
                                                                                                                                                                                                                                       }
+                                                
+
+                                                          
+                                                            
+
+                                                      
+                                                                
+                                                                  
+                                                                    
+                                                                          
+                                                                            
+                                                                                            
+                                                                                          
+
+                                                                                                
+                                                                                            
+                                                                                                
+                                                                                                                    
+                                                                                                                        
+                                                                                                                            
+                                                                                                                              
+
+                                                                                                                            
+                                                                                                                            
+                                                                                                                                            
+                                                                                                                                            
+                                                                                                                                                  
+                                                                                                                                                                      
+                                                                                                                                                                      
+                                                                                                                                                                              
+                                                                                                                                                                                        
+                                                                                                                                                                                                      
+                                                                                                                                                                                                          
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                        
